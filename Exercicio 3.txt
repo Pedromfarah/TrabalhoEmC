@@ -1,0 +1,14 @@
+#include <stdio.h>
+main ()
+{
+float reais, dolar, div;
+
+printf("Digite quanto possue em reais: ");
+scanf("%f", &reais);
+
+dolar = 5.05;
+div = reais / dolar;
+printf(“\nPara cotação do dolar em $5,05 seu valor em reais é de %.2f",
+(div));
+    return 0;
+}
