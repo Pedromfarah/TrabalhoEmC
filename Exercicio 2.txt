@@ -1,0 +1,23 @@
+#include <stdio.h>
+main ()
+{
+int anonasc, anoatual, idadefutura, idadeatual;
+
+printf("Ano de nascimento: ");
+scanf("%d", &anonasc);
+
+printf("Ano atual: ");
+scanf("%d", &anoatual);
+
+idadeatual = (anoatual - anonasc);
+
+printf(“\nSua idade atual é de %.2d"" anos",
+(idadeatual));
+
+idadefutura = (2050 - anonasc);
+
+printf("\nSua idade em 2050 será de %.2d"" anos",
+(idadefutura));
+
+    return 0;
+}
