@@ -1,0 +1,14 @@
+#include <stdio.h>
+main ()
+{
+float p, pg, pm;
+
+printf("Qual o seu peso atual em kg? ");
+scanf("%f", &p);
+pg = p *0.15;
+printf(“\nCaso você engorde 15 porcento ficará com %.2f"" kgs",
+(pg+p));
+pm = p *0.20;
+printf("\nCaso você engorde 20 porcento ficara com %.2f"" kgs", (pm+p));
+ return 0;
+}

@@ -1,0 +1,16 @@
+#include <stdio.h>
+main ()
+{
+float sm, sf, r;
+
+printf("Digite o valor do salario minimo atual: ");
+scanf("%f", &sm);
+printf("Digite o valor do salario do respectivo funcionario: ");
+scanf("%f", &sf);
+
+r = (sf/sm);
+
+printf(“\nO funcionario escolhido recebe %.2f"" salarios minimos",
+(r));
+    return 0;
+}

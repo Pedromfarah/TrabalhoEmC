@@ -1,0 +1,15 @@
+#include <stdio.h>
+main ()
+{
+float diagonalmaior, diagonalmenor, area;
+
+printf("Digite a diagonal maior do losangulo que deseja calcular a area: ");
+scanf("%f", &diagonalmaior);
+printf("Digite a diagonal menor do losangulo que deseja calcular a area: ");
+scanf("%f", &diagonalmenor);
+area = (diagonalmaior*diagonalmenor)/2;
+
+printf(“\nA area do seu losangulo é de:%.2f",
+(area));
+    return 0;
+}

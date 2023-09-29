@@ -1,0 +1,14 @@
+#include <stdio.h>
+main ()
+{
+float reais, dolar, aumento,result;
+
+printf("Qual é o seu salario atual em reais? ");
+scanf("%f", &reais);
+aumento = reais/4;
+result = reais + aumento;
+
+printf(“\nSeu novo salario será de  %.2f"" reais",
+(result));
+    return 0;
+}

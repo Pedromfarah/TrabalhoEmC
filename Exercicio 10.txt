@@ -1,0 +1,17 @@
+#include <stdio.h>
+main ()
+{
+float r, c, a, v, pi;
+
+printf("Digite o raio: ");
+scanf("%f", &r);
+pi = 3.14;
+c = 2.0 * pi * r;
+a = pi * r*r;
+v = 3.0/4.0 * pi * r*r*r;
+
+printf("\nO comprimento da esfera é de:%.2f", (c));
+printf("\nA area da esfera é de:%.2f", (a));
+printf("\nO Volume da esfera é de:%.2f", (v));
+ return 0;
+}

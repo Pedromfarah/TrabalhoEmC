@@ -1,0 +1,13 @@
+int main()
+{
+    int t;
+    printf("\nDigite um numero para calcular a tabuada:");
+    scanf("%d", &t);
+
+    for(int x = 1; x<=7; ++x){
+       
+    printf("%ix%i = %i\n", x, t, x * t);
+    }
+
+    return 0;
+}

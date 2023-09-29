@@ -1,0 +1,14 @@
+#include <stdio.h>
+main ()
+{
+float c1, c2, hp;
+
+printf("Digite o valor do primeiro cateto: ");
+scanf("%f", &c1);
+printf("Digite o valor do segundo cateto: ");
+scanf("%f", &c2);
+hp = (c1*c1+c2*c2);
+
+printf("\nO valor de sua hipotenusa é %.2f", (hp));
+ return 0;
+}
