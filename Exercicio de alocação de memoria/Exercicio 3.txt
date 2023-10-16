@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+int *array, n;
+typedef struct { 
+    char modelo[50];
+    char tipo[50];
+    char chassi[50];
+    float valor;
+} carro;
+carro *c;
+
+printf("Digite o tamanho inicial do array: ");
+scanf("%d", &n);
+// Alocação dinâmica de memória usando malloc
+c = (int *) malloc(n * sizeof(int));
+if (c == NULL) {
+printf("Falha na alocação de memória.\n");
+return 1;
+}
+// Preencher o array
+for (int i = 0; i < n; i++) {
+strcpy(c->modelo, "VOLKSWAGEN");
+strcpy(c->tipo, "GOL");
+strcpy(c->chassi, "KDFIOSWQK");
+c->valor = 32,590;
+}
+// Imprimir o array
+printf("Array (antes da realocação): ");
+printf("\nModelo: %s ", c->modelo);
+printf("\nTipo: %s ", c->tipo);
+printf("\nChassi: %s ", c->chassi);
+printf("\nValor: %f ", c->valor);
+
+// Realocar o array para um tamanho maior
+int novo_tamanho = n + 5;
+array = (int *) realloc(array, novo_tamanho * sizeof(int));
+if (array == NULL) {
+printf("Falha na realocação de memória.\n");
+return 1;
+}
+// Preencher os elementos adicionais
+for (int i = n; i < novo_tamanho; i++) {
+array[i] = i * 10;
+}
+// Imprimir o array após a realocação
+printf("\nArray (após a realocação): ");
+
+for (int i = 0; i < novo_tamanho; i++) {
+printf("%d ", array[i]);
+}
+// Liberar a memória alocada
+free(array);
+return 0;
+}

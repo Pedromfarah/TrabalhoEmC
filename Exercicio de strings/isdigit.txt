@@ -1,0 +1,14 @@
+#include <ctype.h>
+#include <stdio.h>
+  
+
+int main()
+{
+    
+    char c = '1';
+   if (isdigit(c))
+        printf("\nA variavel C é um numero de 0-9");
+    else
+        printf("\nA variavel C não é um numero de 0-9");
+    return 0;
+}

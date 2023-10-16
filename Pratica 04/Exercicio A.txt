@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+ FILE *Arq;
+ char *result;
+ char str[20];
+ int iTamanho;
+ Arq = fopen("Arq.txt","r"); 
+ if(!Arq)
+ {
+    printf( "Erro na abertura do arquivo");
+    exit(0);
+ }
+result = fgets(str,13,Arq);
+if(result == NULL)
+printf("Erro na leitura\n");
+else
+printf("O conteudo armazenado do Arquivo é: %s",str);
+
+iTamanho = strlen(result);
+if (result == NULL)
+printf("Não foi encontrado nenhuma string");
+else 
+printf("\n%d", iTamanho);
+fclose(Arq);
+ 
+ Arq = fopen("Arq.txt","a"); 
+ if(!Arq)
+ {
+    printf( "Erro na abertura do arquivo");
+    exit(0);
+ } fprintf (Arq, "\nNumero de caracteres da string é igual a %d", iTamanho);
+fclose(Arq);
+return 0;
+    
+}

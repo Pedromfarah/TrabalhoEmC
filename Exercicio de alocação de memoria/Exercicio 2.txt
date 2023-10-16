@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+    int i;
+
+  struct pessoa {
+    
+   char nome[50];
+   int cpf[25];
+   float salario[10];
+      
+      
+      
+  };
+  
+  
+  typedef struct pessoa funcionario;
+  
+ 
+  funcionario *sptr;
+  funcionario *tmp;
+  
+  
+  
+  sptr = (funcionario *) calloc (1, sizeof(funcionario));
+  
+
+  for(i = 0, tmp = sptr; i < 1; i++, tmp++) {
+    printf("Digite o NOME: ");
+    scanf("%s", tmp->nome);
+    printf("Digite o CPF: ");
+    scanf("%s", tmp->cpf);
+    printf("Digite o SALARIO em reais: ");
+    scanf("%s", tmp->salario);
+  }
+  
+
+ 
+  for(i = 0, tmp = sptr; i < 1; i++, tmp++) {
+    printf("O nome salvo é: %s\n", tmp->nome);
+    printf("O CPF salvo é: %s\n", tmp->cpf);
+    printf("O salario salvo é: %s\n", tmp->salario);
+}
+  free(sptr);
+
+  return 0;
+}

@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+ 
+int a, b, resultado;
+
+ FILE *arq;
+ arq = fopen("arq.txt","wt"); 
+ if(!arq)
+ {
+    printf( "Erro na abertura do arquivo");
+    exit(0);
+ }
+ 
+ printf("\nDigite o primeiro valor: ");
+ scanf("%d", &a);
+ printf("\nDigite o segundo valor: ");
+ scanf("%d", &b);
+ 
+ resultado = b - a;
+ printf("\nA diferença entre esses numeros que será impressa no arquivo.txt é de: %d", resultado);
+ 
+ 
+ 
+ 
+fprintf (arq, "Diferençã: %d", resultado);
+
+
+
+fclose(arq);
+return 0;
+}

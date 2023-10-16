@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+char * reverse( char * s )
+{
+    int length = strlen(s) ;
+    int c, i, j;
+
+    for (i = 0, j = length - 1; i < j; i++, j--)
+    {
+        c = s[i];
+        s[i] = s[j];
+        s[j] = c;
+    }
+
+    return s;
+}
+int main()
+{
+ FILE *Arq;
+ char *result;
+ char str[20];
+ int iTamanho;
+ Arq = fopen("Arq.txt","r"); 
+ if(!Arq)
+ {
+    printf( "Erro na abertura do arquivo");
+    exit(0);
+ }
+result = fgets(str,13,Arq);
+if(result == NULL)
+printf("Erro na leitura\n");
+else
+printf("O conteudo armazenado do Arquivo é: %s",str);
+fclose(Arq);
+
+Arq = fopen("Arq.txt","a"); 
+ if(!Arq)
+ {
+    printf( "Erro na abertura do arquivo");
+    exit(0);
+ } fprintf (Arq, "\nO conteudo armazenado no Arquivo lido de trás pra frente é: %s", reverse(str));
+
+fclose(Arq);
+
+return 0;
+    
+}

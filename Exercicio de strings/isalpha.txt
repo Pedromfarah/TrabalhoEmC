@@ -1,0 +1,17 @@
+#include stdio.h											
+#include ctype.h
+
+int main()
+{
+   char c;
+   c = '0';
+   
+   printf(Se retornar 1 é uma letra, caso contrario retornará 0 %dn, isalpha(c));
+   c = 'W';
+   printf(Se retornar 1 é uma letra, caso contrario retornará 0 %dn, isalpha(c));
+
+  
+
+   return 0;
+}
+  

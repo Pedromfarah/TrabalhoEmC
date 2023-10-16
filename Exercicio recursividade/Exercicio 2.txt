@@ -1,0 +1,16 @@
+int SomaNaturais(int n)
+{
+ if (n == 0)
+ return 0;
+ else
+ return n + SomaNaturais(n-1);
+}
+int main()
+{
+ int n,soma;
+ printf("\nDigite o numero que deseja fazer a soma: ");
+ scanf("%d",&n);
+ soma = SomaNaturais(n);
+ printf("Resultado = %d\n",soma);
+ return 1;
+} 

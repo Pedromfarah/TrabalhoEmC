@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+int p(int base, int expoente){
+ if(expoente == 0)
+ return 1;
+ else
+ return (base * p(base, expoente-1));}
+
+int main(){
+ 
+ int base, expoente, resultado, i, n;
+ FILE *arq;
+ arq = fopen("arq.txt","wt"); 
+ if(!arq)
+ {
+    printf( "Erro na abertura do arquivo");
+    exit(0);
+ }
+ printf("\nDigite a base desejada: ");
+ scanf("%d", &base);
+ printf("\nDigite o expoente desejado: ");
+ scanf("%d", &expoente);
+ resultado = p(base,expoente);
+ printf("%d elevado a %d = %d", base, expoente,resultado);
+ 
+ 
+fprintf (arq, "Base digitada: %d", base);
+fprintf (arq, "\nExpoente digitado: %d", expoente);
+fprintf (arq, "\nResultado da operação : %d", resultado);
+
+
+fclose(arq);
+return 0;
+}

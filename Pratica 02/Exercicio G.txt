@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define STRLEN 200
+
+int main(){
+ 
+char final[STRLEN];
+char a[] = "a";
+char b[] = "b";
+ FILE *arq;
+ arq = fopen("arq.txt","wt"); 
+ if(!arq)
+ {
+    printf( "Erro na abertura do arquivo");
+    exit(0);
+ }
+ snprintf(final, STRLEN, "%s%s", a, b);
+ 
+   
+  
+ 
+
+ 
+ 
+fprintf (arq, "Letra escolhida: %s", a);
+fprintf (arq, "\nLetra escolhida: %s", b);
+fprintf (arq, "\nResultado da concatenação: %s", final);
+
+
+fclose(arq);
+return 0;
+}

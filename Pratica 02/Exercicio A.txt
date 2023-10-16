@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+ FILE *ExercicioA;
+ char n1[1000];
+ char n2[1000];
+ int i;
+ ExercicioA = fopen("ExercicioA","w"); 
+ if(!ExercicioA)
+ {
+    printf( "Erro na abertura do arquivo");
+    exit(0);
+ }
+ printf("\nPrimeiro número: ");
+ gets(n1);
+ for(i=0; n1[i]; i++) putc(n1[i], ExercicioA);
+ printf("\nSegundo número: ");
+ gets(n2);
+ for(i=0; n2[i]; i++) putc(n2[i], ExercicioA);
+ fclose(ExercicioA);
+ return 0;
+}

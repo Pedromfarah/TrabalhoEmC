@@ -1,0 +1,28 @@
+#include <stdlib.h> 
+#include <time.h> 
+#include <stdio.h> 
+int main() {
+int conjuntoA, conjuntoB, i;
+FILE *arq;
+
+ arq = fopen("arq.txt","w"); 
+ if(!arq)
+ {
+    printf( "Erro na abertura do arquivo");
+    exit(0);
+ }
+
+srand(time (NULL)); 
+for(i = 0; i < 10; i++)
+conjuntoA = rand () %100;
+conjuntoB = rand () %100;
+printf("%d", conjuntoA);
+printf("\n%d", conjuntoB);
+
+for(i=0; i < 10; i++)
+  {
+    fputc(conjuntoA, arq);    
+  }
+fclose(arq);
+return 0;
+}

@@ -1,0 +1,13 @@
+#include <ctype.h>
+#include <stdio.h>
+
+int main()
+{
+    
+    char c = 'm';
+   if (isupper(c))
+        printf("\nA variavel C é uma letra maiuscula");
+    else
+        printf("\nA variavel C não é uma letra maiuscula");
+    return 0;
+}

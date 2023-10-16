@@ -1,0 +1,21 @@
+#include <stdio.h> //FILE, fopen (), fgets (), puts (), fclose ().
+#include <stdlib.h> //system ().
+
+int main ( ) {
+int tam; char string[256];
+FILE *arq;
+
+if ((arq = fopen ("arquivoC.txt", "r")) == NULL) {
+printf ("\n Erro ao abrir o arquivo arquivoC.txt.");
+system ("pause");
+exit (1);
+}
+
+printf ("\nConteudo do arquivo:\n");
+while (fgets (string, 256, arq) != NULL)
+puts (string);
+
+fclose (arq);
+system ("pause");
+return 0;
+}

@@ -1,0 +1,14 @@
+#include <ctype.h>
+#include <stdio.h>
+  
+
+int main()
+{
+    
+    int c = 2;
+   if (isalnum(c))
+        printf("\nA variavel C é uma letra ");
+    else
+        printf("\nA variavel C não é uma letra ");
+    return 0;
+}
